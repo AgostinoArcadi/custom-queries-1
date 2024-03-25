@@ -31,6 +31,11 @@ public class FlightService {
         return flightSaved;
     }
 
+    public List<Flight> getAll() {
+        List<Flight> flights = flightRepository.findAll();
+        return flights;
+    }
+
     private String randomString() {
         UUID randomUUID = UUID.randomUUID();
         String randomString = randomUUID.toString().replaceAll("-", "");
